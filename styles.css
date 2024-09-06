@@ -1,0 +1,57 @@
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #70c5ce;
+    font-family: Arial, sans-serif;
+  }
+  
+  #gameArea {
+    width: 400px;
+    height: 600px;
+    background-color: #70c5ce;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #000;
+  }
+  
+  #bird {
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    border-radius: 50%;
+  }
+  
+  .pipe {
+    width: 60px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: movePipe 3s linear infinite;
+  }
+  
+  .pipe.lower {
+    top: unset;
+    bottom: 0;
+  }
+  
+  @keyframes movePipe {
+    0% {
+      right: -60px;
+    }
+    100% {
+      right: 460px;
+    }
+  }
+  
+  #score {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
